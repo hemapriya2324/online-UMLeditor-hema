@@ -1,6 +1,6 @@
 # online-UML-hema
 building a online UML editor
-A Vue.js, Vuex project
+A Vue.js, javascript web project
 UML online demo client editor
 # PlantUML Editor
 
