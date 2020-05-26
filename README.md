@@ -6,9 +6,9 @@ UML online demo client editor
 
 > A Vue.js, Vuex project
 
-![PlantUML Editor](public/static/favicon-60.png)　PlantUML online demo client
+![PlantUML Editor](public1/static1/favicon-60.png)　PlantUML online demo client
 
-![PlantUML Editor](public/static/capture1_20170809.png)
+![PlantUML Editor](public1/static1/capture1_20170809.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0e9c5e9a-b38a-483f-887d-18e4927af717/deploy-status)](https://app.netlify.com/sites/plantuml-editor/deploys)
 
