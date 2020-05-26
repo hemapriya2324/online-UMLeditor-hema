@@ -64,8 +64,6 @@ Just run:
 ```
 mvn jetty:run
 ```
-
-The server is now listing to [http://localhost:8080/plantuml](http://localhost:8080/plantuml).
 In this way the server is run on an embedded jetty server.
 
 You can specify the port at which it runs:
@@ -83,7 +81,6 @@ docker run -d -p 8080:8080 plantuml/plantuml-server:jetty
 docker run -d -p 8080:8080 plantuml/plantuml-server:tomcat
 ```
 
-The server is now listing to [http://localhost:8080](http://localhost:8080).
 
 To run plantuml using different base url, change the `docker-compose.yml` file:
 ~~~
@@ -92,7 +89,7 @@ args:
 ~~~
 
 And run `docker-compose up --build`. This will build a modified version of the image using
-the base url `/plantuml`, e.g. http://localhost/plantuml
+the base url `/plantuml`,
 
 How to set PlantUML options
 =================================
@@ -121,31 +118,12 @@ You can set all  the following variables:
 * `GRAPHVIZ_DOT`
     * Link to 'dot' executable
     * Default value: `/usr/local/bin/dot` or `/usr/bin/dot`
-* `PLANTUML_STATS`
-    * Set it to `on` to enable [statistics report](http://plantuml.com/statistics-report)
-    * Default value: `off`
 * `HTTP_AUTHORIZATION`
     * when calling the `proxy` endpoint, the value of `HTTP_AUTHORIZATION` will be used to set the HTTP Authorization header
     * Default value: `null`
 * `ALLOW_PLANTUML_INCLUDE`
     * Enables `!include` processing which can read files from the server into diagrams. Files are read relative to the current working directory.
     * Default value: `false`
-
-Alternate: How to build your docker image
-======================================================
-
-This method uses maven to run the application. That requires internet connectivity.
-So, you can use following command to create a self-contained docker image that will "just-work".
-
-*Note: Generate the WAR (instructions further below) prior to running "docker build"*
-
-```
-docker image build -t plantuml-server .
-docker run -d -p 8080:8080 plantuml-server
-```
-The server is now listing to [http://localhost:8080/plantuml](http://localhost:8080/plantuml).
-
-You may specify the port in `-p` Docker command line argument.
 
 
 How to generate the war
