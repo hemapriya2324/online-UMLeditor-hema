@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Clipboard from 'clipboard'
-import $ from 'jquery' // コンパイルを通すためだけの書き方
+import $ from 'jquery'
 interface jQuery {}
 
 // https://clipboardjs.com/
