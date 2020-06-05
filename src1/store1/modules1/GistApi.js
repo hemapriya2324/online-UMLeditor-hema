@@ -93,22 +93,16 @@ const actions: any = {
     })
   },
   createGist({ state, commit, dispatch }: any, data: any) {
-    // 送信中フラグ ON
+   
     commit('startSending')
 
-    // リセット
     commit('resetResponse')
     commit('resetFiles')
 
-    // テキスト追加
     dispatch('addTxtUML', data)
-
-    // svg 再取得
     axios.all([dispatch('addSvgUML', data)]).then(
       axios.spread(() => {
-        // text と svg が両方ある場合
         if (Object.keys(state.gist.files).length >= 2) {
-          // Gist 投稿
           axios
             .post(`${state.api}?access_token=${state.token}`, state.gist)
             .then((response: any) => {
