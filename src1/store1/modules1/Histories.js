@@ -13,7 +13,6 @@ const state: any = {
 
 const mutations: any = {
   defineScheme(state: any) {
-    // バージョン 2
     state.db
       .version(state.versions[1])
       .stores({
@@ -24,7 +23,6 @@ const mutations: any = {
           history.encodedText = _.last(history.src.split('/'))
         })
       })
-    // バージョン 1
     state.db.version(state.versions[0]).stores({
       plantuml: state.schemes[0]
     })
